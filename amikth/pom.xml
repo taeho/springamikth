@@ -36,6 +36,12 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		
+		<repository>
+			<id>codelds</id>
+			<name>ORACLE JDBC Repository</name>
+			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
+		</repository> 
 	</repositories>
 	
 	<dependencies>
@@ -135,11 +141,11 @@
 			<version>1.4</version>
 		</dependency>
 		
-		<!-- MySql -->
+		<!-- Oracle -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.31</version>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.3</version>
 		</dependency>
 
 		<!-- AspectJ -->
@@ -217,15 +223,15 @@
 		
 		<!-- MappingJacksonJsonView -->
 		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.13</version>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		    <version>2.6.4</version>
 		</dependency>
-		
+		 
 		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-core-asl</artifactId>
-			<version>1.9.13</version>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>2.6.4</version>
 		</dependency>
 		
 		<!-- MultipartHttpServletRequset -->
@@ -254,6 +260,26 @@
 			<artifactId>egovframework.rte.fdl.property</artifactId>  
 			<version>2.7.0</version>
 		</dependency>
+		
+		<!-- Mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+		</dependency>
+		
+		<!-- 전자정부 페이징 -->
+		<dependency>
+		    <groupId>egovframework.rte</groupId>
+		    <artifactId>egovframework.rte.ptl.mvc</artifactId>
+		    <version>3.5.0</version>
+        </dependency>
 		
 		<!-- Log4j -->
 		<dependency>
@@ -299,17 +325,6 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-core</artifactId>
-		    <version>2.6.4</version>
-		</dependency>
-		 
-		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>2.6.4</version>
 		</dependency>	  
 	</dependencies>
 	
